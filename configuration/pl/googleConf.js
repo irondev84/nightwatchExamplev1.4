@@ -1,5 +1,4 @@
 module.exports = {
-    newsHeaderLogo: 'Wiadomości',
-    newsHeaderLabel: 'Nagłówki'
+  newsHeaderLogo: 'Wiadomości',
+  newsHeaderLabel: 'Nagłówki'
 }
-  

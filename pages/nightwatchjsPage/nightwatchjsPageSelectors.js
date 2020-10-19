@@ -1,4 +1,3 @@
 module.exports = {
-    nightwatchjsMainTitle: '.col-md-6 h1'
+  nightwatchjsMainTitle: '.col-md-6 h1'
 }
-

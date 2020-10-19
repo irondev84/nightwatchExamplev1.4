@@ -1,16 +1,18 @@
 const dictionary = require('./../../dictionary/dictionary_pl')
 
 module.exports = {
-    'My first test': function(browser){
-        browser
-            .page.ecosiaPage().openEcosiaPage()
-            .page.ecosiaPage().setSearchText(dictionary.ecosiaSearchText)
-            .page.ecosiaPage().checkFirstResult(dictionary.nightwatchSearchResult)
-            .page.ecosiaPage().goToFirstResultSearch()
-            .page.nightwatchjsPage().checkUrl(dictionary.nightwatchURL)
-            .page.nightwatchjsPage().checkUrl_v2(dictionary.nightwatchURL)
-            .page.nightwatchjsPage().checkMainTitle()
+  'My first test': function (browser) {
+    const ecosiaPage = browser.page.ecosiaPage()
+    const nightwatchjsPage = browser.page.nightwatchjsPage()
 
-        browser.end()
-    }
+    ecosiaPage.openEcosiaPage()
+    ecosiaPage.setSearchText(dictionary.ecosiaSearchText)
+    ecosiaPage.checkFirstResult(dictionary.nightwatchSearchResult)
+    ecosiaPage.goToFirstResultSearch()
+    nightwatchjsPage.checkUrl(dictionary.nightwatchURL)
+    nightwatchjsPage.checkUrl_v2(dictionary.nightwatchURL)
+    nightwatchjsPage.checkMainTitle()
+
+      .end()
+  }
 }

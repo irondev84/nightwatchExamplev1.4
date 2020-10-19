@@ -1,4 +1,5 @@
 const dictionary = require('../../dictionary/googleDictionary')
+
 module.exports = {
   '@tags': ['google_pl'],
   'Check google search result': function (browser) {
@@ -6,8 +7,7 @@ module.exports = {
 
     googlePage.openGooglePage()
     googlePage.checkMainPage(dictionary.search.googleSearchButton,
-      dictionary.search.googleLuckySearchButton
-    )
+      dictionary.search.googleLuckySearchButton)
     googlePage.typeSearchTextAndVerifyResults('nightwatch js')
       .end()
   }
