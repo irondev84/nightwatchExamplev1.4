@@ -1,30 +1,28 @@
 const ecosiaPageSelectors = require('./ecosiaPageSelectors')
 
+const commands = {
+  openEcosiaPage: function () {
+    return this.api.url('https://ecosia.org')
+  },
 
-    const commands = {
-        openEcosiaPage: function(){
-            return this.api.url('https://ecosia.org')
-        },
-    
-        setSearchText: function(searchText){
-            return this
-                .setValue(ecosiaPageSelectors.ecosiaSearchInput, searchText)
-                .click(ecosiaPageSelectors.ecosiaSearchSubmitButton)
-        },
-    
-        checkFirstResult: function(expectedResult){
-            return this
-                .assert.containsText(ecosiaPageSelectors.firstSearchValueResult, expectedResult)
-        },
-    
-        goToFirstResultSearch: function(){
-            return this
-                .click(ecosiaPageSelectors.firstSearchValueResult)
-        }
-    }
+  setSearchText: function (searchText) {
+    return this
+      .setValue(ecosiaPageSelectors.ecosiaSearchInput, searchText)
+      .click(ecosiaPageSelectors.ecosiaSearchSubmitButton)
+  },
 
+  checkFirstResult: function (expectedResult) {
+    return this
+      .assert.containsText(ecosiaPageSelectors.firstSearchValueResult, expectedResult)
+  },
 
-    module.exports = {
-        commands: [commands],
-        elements: ecosiaPageSelectors
-    }
+  goToFirstResultSearch: function () {
+    return this
+      .click(ecosiaPageSelectors.firstSearchValueResult)
+  }
+}
+
+module.exports = {
+  commands: [commands],
+  elements: ecosiaPageSelectors
+}
