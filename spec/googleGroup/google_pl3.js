@@ -5,7 +5,7 @@ module.exports = {
       
       const googlePage = browser.page.googlePage()
       
-         googlePage.openGooglePage()
+=       googlePage.openGooglePage()
         googlePage.checkMainPage(dictionary.search.googleSearchButton,
             dictionary.search.googleLuckySearchButton
             )

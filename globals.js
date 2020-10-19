@@ -27,19 +27,15 @@ module.exports = {
     done()
   },
 
-    getConfig: function (defConfFilePath) {
-        return require(this.configurationFilesLocation + defConfFilePath)
-      },
+  getConfig: function (defConfFilePath) {
+      return require(this.configurationFilesLocation + defConfFilePath)
+        },
     
-    url () {
-        if (this.environment === 'nl') {
-          return 'https://news.google.com/?hl=nl&gl=NL&ceid=NL:nl'
-        }
-
-        if (this.environment === 'pl') {
-            return 'https://news.google.com/?hl=pl&gl=PL&ceid=PL:pl'
-        }  
+  url () {
+      if (this.environment === 'pl') {
+          return 'https://news.google.com/?hl=pl&gl=PL&ceid=PL:pl'
+      }  
         
-      },
-      reporter: reporter.fn
+    },
+  reporter: reporter.fn
 }

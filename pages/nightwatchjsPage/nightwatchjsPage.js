@@ -1,21 +1,26 @@
 const nightwatchjsPageSelectors = require('./nightwatchjsPageSelectors')
 
-module.exports = function(browser) {
+const commands = {
 
-    this.checkMainTitle = () => {
-        return browser
+    checkMainTitle: function(){
+        return this
             .assert.containsText(nightwatchjsPageSelectors.nightwatchjsMainTitle, 'Nightwatch.js')
-    }
+    },
 
-    this.checkUrl = (url) => {
-        return browser
+    checkUrl: function(url){
+        return this
             .CheckUrl(url)
-    }
+    },
 
-    this.checkUrl_v2 = (url) => {
-        return browser
+    checkUrl_v2: function(url){
+        return this
             .assert.urlEquals(url)
     }
-    
 }
+    
+    
 
+module.exports = {
+    commands: [commands],
+    elements: nightwatchjsPageSelectors
+}
