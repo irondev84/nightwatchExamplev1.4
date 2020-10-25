@@ -9,7 +9,7 @@ const commands = {
 
   checkUrl: function (url) {
     return this
-      .CheckUrl(url)
+      .CheckUrl()
   },
 
   checkUrl_v2: function (url) {
