@@ -13,7 +13,7 @@ const commands = {
 
   checkFirstResult: function (expectedResult) {
     return this
-      .assert.containsText(ecosiaPageSelectors.firstSearchValueResult, expectedResult)
+      .verify.containsText(ecosiaPageSelectors.firstSearchValueResult, expectedResult)
   },
 
   goToFirstResultSearch: function () {
