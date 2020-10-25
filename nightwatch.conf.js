@@ -16,9 +16,7 @@ module.exports = {
   custom_commands_path: 'commands/',
   custom_assertions_path: '',
   page_objects_path: [
-    'pages/googlePage',
-    'pages/ecosiaPage',
-    'pages/nightwatchjsPage'
+    'pages/googlePage'
   ],
   globals_path: 'globals.js',
   selenium: {
